@@ -332,7 +332,7 @@
                         <td colspan="2">' + (feature.properties['ASNM1'] !== null ? autolinker.link(String(feature.properties['ASNM1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Media'] !== null ? autolinker.link(String(feature.properties['Media']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Media'] !== null ? '<img src="images/' + String(feature.properties['Media']).replace(/[\\/:]/g, '_').trim().replace(/'/g, '\'').replace(/"/g, '&quot;') + '">' : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
@@ -415,7 +415,7 @@
                         <td colspan="2">' + (feature.properties['ASNM1'] !== null ? autolinker.link(String(feature.properties['ASNM1']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['Media'] !== null ? autolinker.link(String(feature.properties['Media']).replace(/'/g, '\'').toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Media'] !== null ? '<img src="images/' + String(feature.properties['Media']).replace(/[\\/:]/g, '_').trim().replace(/'/g, '\'').replace(/"/g, '&quot;') + '">' : '') + '</td>\
                     </tr>\
                 </table>';
             var content = removeEmptyRowsFromPopupContent(popupContent, feature);
